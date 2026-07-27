@@ -1,4 +1,5 @@
 torch
-gradio
+streamlit
 numpy
 pandas
+scikit-learn
