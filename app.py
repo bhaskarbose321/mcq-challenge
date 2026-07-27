@@ -10,5 +10,4 @@ if st.button("Predict"):
         result = predict(text)
         st.success(f"Prediction: {result}")
     else:
-        st.warning("Please enter a question.")  st.write("Prediction:", result)
-
+        st.warning("Please enter a question.")
