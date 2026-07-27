@@ -1,11 +1,14 @@
-import gradio as gr
+import streamlit as st
 from inference import predict
 
-demo = gr.Interface(
-    fn=predict,
-    inputs=gr.Textbox(lines=4, label="Question"),
-    outputs=gr.Textbox(label="Predicted Answer"),
-    title="Smart MCQ Solver (BiLSTM)"
-)
+st.title("Smart MCQ Solver - BiLSTM")
 
-demo.launch()
+text = st.text_area("Enter question")
+
+if st.button("Predict"):
+    if text.strip():
+        result = predict(text)
+        st.success(f"Prediction: {result}")
+    else:
+        st.warning("Please enter a question.")  st.write("Prediction:", result)
+
