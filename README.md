@@ -4,7 +4,7 @@ A web application that predicts the correct answer for multiple-choice questions
 
 ## Features
 
-- Enter any MCQ question with up to 5 options (A-E)
+- Enter any MCQ question with options
 - Get instant predictions using a trained BiLSTM model
 - Clean, user-friendly interface
 
@@ -21,4 +21,4 @@ The model is a BiLSTM (Bidirectional LSTM) trained on MCQ data. It processes the
 
 ## Deployment
 
-This app is deployed on Hugging Face Spaces.
+This app is deployed on Render.com.

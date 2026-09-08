@@ -3,9 +3,14 @@ from inference import predict
 
 st.title("🧠 Smart MCQ Solver")
 
-text = st.text_area("Enter your MCQ question", height=150)
+col1, col2 = st.columns([4, 1])
+with col1:
+    text = st.text_area("Enter your MCQ question", height=150)
+with col2:
+    st.write("")  # Spacer
+    button_clicked = st.button("predict answer", type="primary")
 
-if st.button("🔮 Predict Answer", type="primary"):
+if button_clicked:
     if text.strip():
         with st.spinner("Analyzing..."):
             try:
