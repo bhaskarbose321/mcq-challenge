@@ -2,11 +2,8 @@ import streamlit as st
 from inference import predict
 
 st.title("🧠 Smart MCQ Solver")
-st.markdown("Enter your MCQ question with options below.")
 
-st.markdown("**Format:** Question A. Option1 B. Option2 C. Option3 D. Option4")
-
-text = st.text_area("Question with Options", height=150)
+text = st.text_area("Enter your MCQ question", height=150)
 
 if st.button("🔮 Predict Answer", type="primary"):
     if text.strip():
